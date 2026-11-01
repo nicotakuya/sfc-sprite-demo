@@ -4,13 +4,18 @@ ifeq ($(strip $(PVSNESLIB_HOME)),)
 $(error "Please create an environment variable PVSNESLIB_HOME by following this guide: https://github.com/alekmaul/pvsneslib/wiki/Installation")
 endif
 
-include ${PVSNESLIB_HOME}/devkitsnes/snes_rules
-
 #---------------------------------------------------------------------------------
 # ROMNAME is used in snes_rules file
 export ROMNAME := spdemo
+export ROMTITLE := SPRITE DEMO
+export COUNTRY := 0
 
-all: bitmaps $(ROMNAME).sfc
+include ${PVSNESLIB_HOME}/devkitsnes/snes_rules
+
+.PHONY: all
+
+all: bitmaps buildWithSummary
+buildActual: $(OBJS) $(ROMNAME).sfc
 
 clean: cleanBuildRes cleanRom cleanGfx
 
