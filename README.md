@@ -3,6 +3,16 @@
 
 ## 概要
 PVSnesLibで作ったスーパーファミコン用のスプライト表示デモ。スプライトを動かしてFps(Frame per second)を測定します。
+PVSnesLibはバージョン4.6で動作チェックしました。
 
 ## ファイル説明
 ・spdemo.sfc：ROMイメージのファイル。
+
+・main.c：ソースです。
+
+・makefile：メイクファイルです。
+
+・build.bat：makeを実行するバッチファイルです。
+
+## Movie
+https://www.youtube.com/watch?v=Z4L5ui2dKlY
